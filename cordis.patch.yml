@@ -1,0 +1,7 @@
+# dsh-board bundle layer: one row mounts both halves of the plugin.
+# The host half provides the ticket store, model tools, and /api/board routes;
+# the client half (declared through package.json `dsh.client`) renders the
+# Board main panel and its sidebar entry.
+- insert:
+    - id: board
+      name: dsh-board
