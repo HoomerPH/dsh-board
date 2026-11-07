@@ -5,20 +5,9 @@ Thanks for taking a look at dsh-board.
 ## Development
 
 ```sh
-npm install          # dev dependency: playwright-core (for `npm run ui`)
 npm test             # offline: store, run controller, routes, tools, client bundle
 node scripts/check.mjs
 ```
-
-Browser suites (need a DeepSeek Harness install; `DSH_BIN` or `dsh` on PATH):
-
-```sh
-npm run e2e          # boots a throwaway profile, checks routes/SSE
-npm run ui           # boots a throwaway profile, drives a real Chromium
-```
-
-`npm run ui` uses a cached Playwright Chromium. Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE` to a Chrome
-binary if none is cached.
 
 ## Conventions
 

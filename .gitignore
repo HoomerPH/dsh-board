@@ -2,10 +2,3 @@ node_modules/
 .DS_Store
 *.log
 .env
-media/raw/
-media/check/
-media/check2/
-media/anim/
-media/tour/
-media/free/music.flac
-media/free/montage.mp4

@@ -26,12 +26,7 @@
   "scripts": {
     "check": "node scripts/check.mjs",
     "install-profile": "bash scripts/install-profile.sh",
-    "test": "node --test test/*.test.mjs",
-    "e2e": "node scripts/e2e.mjs",
-    "ui": "node scripts/ui-e2e.mjs"
-  },
-  "devDependencies": {
-    "playwright-core": "^1.63.0"
+    "test": "node --test test/*.test.mjs"
   },
   "author": "dsh-board contributors",
   "repository": {

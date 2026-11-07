@@ -6,15 +6,9 @@ review-gated, budgeted and audited.
 
 [![ci](https://github.com/HoomerPH/dsh-board/actions/workflows/ci.yml/badge.svg)](https://github.com/HoomerPH/dsh-board/actions/workflows/ci.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![tests](https://img.shields.io/badge/tests-146%20offline%20%2B%2010%20ui-brightgreen)
+![tests](https://img.shields.io/badge/tests-146%20offline-brightgreen)
 
 ![The board](screenshots/compact-cards.png)
-
-## Demo
-
-![dsh-board demo](media/dsh-board-demo-v3.gif)
-
-[Watch the 49-second demo (MP4)](https://github.com/HoomerPH/dsh-board/releases/download/v0.37.0/dsh-board-demo-v3.mp4) · CC0 music + b-roll, animated cards, captions · [interactive tour](https://hoomerph.github.io/dsh-board/demo.html) · [media credits](media/free/CREDITS.md) · re-render with `node scripts/demo-video.mjs && node scripts/demo-cards.mjs && bash scripts/build-demo-v3.sh`
 
 ## Install from source (GitHub)
 
@@ -243,17 +237,13 @@ HTTP routes (owner-peer authenticated): `/api/board/state`, `/api/board/ticket`,
 ## Development
 
 ```sh
-npm install          # dev dependency: playwright-core (browser UI tests)
 npm test             # 146 offline tests: store, run controller, routes, tools, client bundle
 node scripts/check.mjs
-npm run e2e          # boots a throwaway profile: routes, SSE (10 checks)
-npm run ui           # drives a real Chromium over the board UI (10 checks)
 ```
 
-`npm run e2e` needs `dsh` on `PATH` or `DSH_BIN`; `npm run ui` needs a cached Playwright Chromium or
-`PLAYWRIGHT_CHROMIUM_EXECUTABLE`. Runtime dependencies: none (only the Harness itself). See
-[CONTRIBUTING.md](CONTRIBUTING.md) for conventions and [docs/ROADMAP.md](docs/ROADMAP.md) for the
-detailed capability notes and design trade-offs.
+Runtime dependencies: none (only the Harness itself). See [CONTRIBUTING.md](CONTRIBUTING.md) for
+conventions and [docs/ROADMAP.md](docs/ROADMAP.md) for the detailed capability notes and design
+trade-offs.
 
 ## Limitations
 
