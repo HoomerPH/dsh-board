@@ -10,6 +10,12 @@ review-gated, budgeted and audited.
 
 ![The board](screenshots/compact-cards.png)
 
+## Demo
+
+![dsh-board demo](media/dsh-board-demo.gif)
+
+[Watch the 38-second demo (MP4)](https://github.com/HoomerPH/dsh-board/releases/download/v0.37.0/dsh-board-demo.mp4) · silent, captioned · re-render with `node scripts/demo-video.mjs && bash scripts/build-demo-video.sh`
+
 ## Install from source (GitHub)
 
 > **Not on npm.** The plain `dsh-board` name on npm belongs to an unrelated project, so distribution is
