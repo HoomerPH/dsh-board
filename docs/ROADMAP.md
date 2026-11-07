@@ -1,5 +1,8 @@
 # dsh-board — improvement roadmap
 
+> **Historical note:** this roadmap records the original slice-by-slice implementation. The promotional-video pipeline and the one-off `e2e`/browser UI scripts referenced in some entries were removed in the v0.37.0 cleanup; the 146-test offline suite and `scripts/check.mjs` remain.
+
+
 Written against the v1 MVP (16 tickets / 21 runs of real data, all six slices verified in
 `README.md` §Verification history). Every claim below is anchored to code or to a platform API in
 the installed Harness checkout, and the correctness items in Slice 0 were reproduced against
