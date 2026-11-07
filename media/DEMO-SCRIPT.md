@@ -2,15 +2,17 @@
 
 Two cuts are maintained:
 
-- **v2 (current): 41.2 s, 1920×1080, 30 fps, with ambient music, animated title/outro cards, cross-fades and animated captions.**
+- **v3 (current): 49.0 s, 1920×1080, 30 fps. CC0 b-roll from Openverse (graded to the board palette), CC0 music from Wikimedia Commons, animated title/outro cards, cross-fades and animated captions. Credited in `media/free/CREDITS.md`.**
+- **v2: 41.2 s** — same structure with a locally synthesized music bed.
 - v1 (legacy): 38.4 s, 1280×720, silent, static title cards.
 
 Re-render v2:
 
 ```sh
-node scripts/demo-cards.mjs      # animated 1080p title/outro (needs cached Chromium)
-node scripts/demo-video.mjs      # scripted UI recording (raw)
-bash scripts/build-demo-v2.sh    # music bed, transitions, captions, mux
+node scripts/openverse-assets.mjs  # CC0 stills from Openverse (image API is keyless)
+node scripts/demo-video.mjs        # scripted UI recording (raw)
+node scripts/demo-cards.mjs        # animated 1080p title/outro (needs cached Chromium)
+bash scripts/build-demo-v3.sh      # montage, CC0 music, transitions, captions, mux
 ```
 
 ## v2 timeline

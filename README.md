@@ -12,9 +12,9 @@ review-gated, budgeted and audited.
 
 ## Demo
 
-![dsh-board demo](media/dsh-board-demo-v2.gif)
+![dsh-board demo](media/dsh-board-demo-v3.gif)
 
-[Watch the 41-second demo (MP4)](https://github.com/HoomerPH/dsh-board/releases/download/v0.37.0/dsh-board-demo-v2.mp4) · music + captions · [interactive tour](https://hoomerph.github.io/dsh-board/demo.html) · re-render with `node scripts/demo-video.mjs && bash scripts/build-demo-video.sh` (v1) or `node scripts/demo-cards.mjs && bash scripts/build-demo-v2.sh` (v2)
+[Watch the 49-second demo (MP4)](https://github.com/HoomerPH/dsh-board/releases/download/v0.37.0/dsh-board-demo-v3.mp4) · CC0 music + b-roll, animated cards, captions · [interactive tour](https://hoomerph.github.io/dsh-board/demo.html) · [media credits](media/free/CREDITS.md) · re-render with `node scripts/demo-video.mjs && node scripts/demo-cards.mjs && bash scripts/build-demo-v3.sh`
 
 ## Install from source (GitHub)
 
