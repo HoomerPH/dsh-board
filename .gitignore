@@ -4,3 +4,6 @@ node_modules/
 .env
 media/raw/
 media/check/
+media/check2/
+media/anim/
+media/tour/

@@ -1,32 +1,42 @@
 # dsh-board demo — script & storyboard
 
-Runtime: **38.4 s**, 1280×720, 25 fps, silent with burned-in captions.
-Re-render: `node scripts/demo-video.mjs && bash scripts/build-demo-video.sh`
-(needs `DSH_BIN` or `dsh` on PATH and a cached Chromium).
+Two cuts are maintained:
 
-| Time | Scene | On-screen caption | Suggested voice-over |
-|---|---|---|---|
-| 0:00–0:04 | Title card | — | "This is dsh-board — a ticket-first board for DeepSeek Harness." |
-| 0:04–0:09 | Seeded board | Every ticket becomes an isolated agent run | "Create a ticket, and it becomes a real, isolated run instead of a chat message." |
-| 0:09–0:11 | Search / filters | Search, filter and jump across the whole board | "Find anything instantly — by text, state, assignee or saved view." |
-| 0:11–0:14 | Plan review drawer | Plan with the agent before any code runs | "The agent explores and proposes a plan; you approve it before any code is written." |
-| 0:14–0:18.5 | Review panel | Review the diff, checks and worker transcript | "Every run gets its own Git worktree. Review the diff, the checks and the worker's transcript." |
-| 0:18.5–0:23 | Review → reject/approve | Reject resumes the session · approve merges | "Reject resumes the same worker with your notes. Approve squash-merges the branch." |
-| 0:23–0:26 | Batch selection | Batch select, filter and route the queue | "Operate the whole queue: select, assign, archive, all in one action." |
-| 0:26–0:30 | Insights drawer | Insights, inbox and deep links, built in | "Insights, a durable inbox and shareable ticket links are built in." |
-| 0:30–0:33 | Board again | Humans keep the gates — agents do the work | "Agents do the work. Humans keep the gates." |
-| 0:33–0:38 | Outro card | — | "MIT licensed. Clone it, run the install script, and open the board." |
+- **v2 (current): 41.2 s, 1920×1080, 30 fps, with ambient music, animated title/outro cards, cross-fades and animated captions.**
+- v1 (legacy): 38.4 s, 1280×720, silent, static title cards.
 
-## Suggested narration (full read)
+Re-render v2:
+
+```sh
+node scripts/demo-cards.mjs      # animated 1080p title/outro (needs cached Chromium)
+node scripts/demo-video.mjs      # scripted UI recording (raw)
+bash scripts/build-demo-v2.sh    # music bed, transitions, captions, mux
+```
+
+## v2 timeline
+
+| Time | Scene | Caption |
+|---|---|---|
+| 0:00–0:06 | Animated title card | — |
+| 0:06–0:11 | Seeded board | Every ticket becomes an isolated agent run |
+| 0:11–0:13 | Search | Search, filter, jump across the whole board |
+| 0:13–0:16 | Plan-review drawer | Plan with the agent before any code runs |
+| 0:16–0:22 | Review panel | Review the diff, checks and transcript |
+| 0:22–0:25 | Review → reject/approve | Reject resumes the session · approve merges |
+| 0:25–0:29 | Batch selection | Batch select, filter and route the queue |
+| 0:29–0:32 | Insights | Insights, inbox and deep links, built in |
+| 0:32–0:35 | Return to board | Humans keep the gates |
+| 0:35–0:41 | Animated outro | — |
+
+Music is a locally synthesized ambient bed (`media/anim/music.wav`, ffmpeg `aevalsrc`), designed to be
+swapped for a licensed track. The interactive version of the tour lives at
+`docs/demo.html` (GitHub Pages).
+
+## Suggested narration
 
 > This is dsh-board, a ticket-first board for DeepSeek Harness. Create a ticket and it becomes a
-> real, isolated run instead of a chat message. Find anything instantly — by text, state, assignee or
-> saved view. The agent explores and proposes a plan; you approve it before any code is written.
-> Every run gets its own Git worktree. Review the diff, the checks and the worker's transcript.
-> Reject resumes the same worker with your notes; approve squash-merges the branch. Operate the whole
-> queue: select, assign, archive, all in one action. Insights, a durable inbox and shareable ticket
-> links are built in. Agents do the work. Humans keep the gates. MIT licensed — clone it, run the
-> install script, and open the board.
-
-No voice track is included; the MP4 is silent with captions so it autoplays anywhere. Record the
-narration above and mux it with `ffmpeg -i dsh-board-demo.mp4 -i voice.wav -shortest ...` if wanted.
+> real, isolated run instead of a chat message. The agent explores and proposes a plan; you approve it
+> before any code is written. Every run gets its own Git worktree. Review the diff, the checks and the
+> worker's transcript. Reject resumes the same worker with your notes; approve squash-merges the branch.
+> Operate the whole queue in batches. Insights, a durable inbox and shareable ticket links are built in.
+> Agents do the work. Humans keep the gates.
